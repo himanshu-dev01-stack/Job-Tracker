@@ -1,8 +1,12 @@
 import express from 'express';
 import cookieParser from 'cookie-parser';
+import connect from './src/config/mongodb.config';
 
 // express app
 const app = express();
+
+// connect to database
+connect();
 
 //middleware
 app.use(cookieParser());
